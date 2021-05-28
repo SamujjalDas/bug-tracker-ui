@@ -1,0 +1,14 @@
+.center {
+    margin: auto;
+    width: 50%;
+    border:  3px solid  lightblue ;;
+    padding: 10px;
+  }
+
+  .left {
+    margin: left;
+    width: 25%;
+    padding: 10px;
+    
+    text-align : left;
+  }

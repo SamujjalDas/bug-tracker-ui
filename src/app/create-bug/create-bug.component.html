@@ -1,0 +1,54 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: left" class="modal-body left">
+    <pre>{{message | json}}</pre>
+</div>
+
+
+
+
+<div class="modal-body left">
+    <form #addForm="ngForm" (ngSubmit)="createBugNow(addForm)">
+    <div class="form-group">
+       <label for="name">Summary</label>
+       <input type="text" ngModel name="bug_summary" class="form-control" id="name" placeholder="Summary" required>
+    </div>
+    <div class="form-group">
+       <label for="email">Description</label>
+       <input type="email" ngModel name="bug_desc" class="form-control" id="email" placeholder="Description" required>
+    </div>
+    <div class="form-group">
+       <label for="phone">Execution Steps</label>
+       <input type="text" ngModel name="bug_steps" class="form-control" id="jobTile" placeholder="Execution Steps" required>
+    </div>
+    <div class="form-group">
+       <label for="phone">Reported By</label>
+       <input type="number" ngModel name="bug_rep_by" class="form-control" id="phone" placeholder="John Smith" required>
+    </div>
+    <div class="form-group">
+       <label for="phone">Assigned To</label>
+       <input type="number" ngModel name="bug_ass_to" class="form-control" id="imageUrl" placeholder="John Smith" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Module Id</label>
+        <input type="number" ngModel name="mod_id" class="form-control" id="imageUrl" placeholder="Module Id" required>
+     </div>
+     <div class="form-group">
+        <label for="phone">Comments</label>
+        <input type="text" ngModel name="bug_comments" class="form-control" id="imageUrl" placeholder="Comments" required>
+     </div>
+     <div class="form-group">
+        <label for="phone">Attachment Id</label>
+        <input type="text" ngModel name="attach_id" class="form-control" id="imageUrl" placeholder="Attachment Id from Amazon S3" required>
+     </div>
+    <div class="modal-footer">
+       <button type="button" id="add-employee-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Commit</button>
+    </div>
+    </form>
+ </div>
+
+
+ <router-outlet></router-outlet>
