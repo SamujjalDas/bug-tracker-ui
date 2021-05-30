@@ -2,12 +2,11 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-<div style="text-align: left" class="modal-body left">
-    <pre>{{message | json}}</pre>
-</div>
 
 
 
+<div style="text-align: left; font-weight: bold;" class="modal-body left">Bug ID :{{message.bug_id}} <br>
+   Message : {{message.message}}</div>
 
 <div class="modal-body left">
     <form #addForm="ngForm" (ngSubmit)="createBugNow(addForm)">
@@ -49,6 +48,10 @@
     </div>
     </form>
  </div>
+<!-- <div style="text-align: left" class="modal-body left">
+   <pre>{{message | json}}</pre>
+</div> -->
+
 
 
  <router-outlet></router-outlet>

@@ -5,9 +5,7 @@
 
 
 
-<div style="text-align: left" class="modal-body left ">
-    <pre>{{msg | json}}</pre>
-</div>
+
 
 
 <div class="modal-body left">
@@ -22,6 +20,52 @@
     </div>
     </form>
  </div>
+<div class="container mt-5" style="width: initial;">
+ <table class="table table-hover table-condensed">
+   <thead>
+       <tr>
+           <th>Bug Details</th>
+       </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td style="width: 30%;">Bug ID</td>
+         <td style="width: 30%;">{{msg.bug_id}}</td>
+     </tr>
+       <tr>
+           <td>Summary</td>
+           <td>{{msg.bug_summary}}</td>
+       </tr>
+       <tr>
+         <td>Description</td>
+         <td>{{msg.bug_desc}}</td>
+     </tr>
+     <tr>
+      <td>Steps to reproduce</td>
+      <td>{{msg.bug_steps}}</td>
+  </tr>
+  <tr>
+   <td>Reported By</td>
+   <td>{{msg.bug_rep_by}}</td>
+</tr>
+<tr>
+   <td>Assigned to</td>
+   <td>{{msg.bug_ass_to}}</td>
+</tr>
+<tr>
+   <td>Module Id</td>
+   <td>{{msg.mod_id}}</td>
+</tr>
+<tr>
+   <td>Comments</td>
+   <td>{{msg.bug_comments}}</td>
+</tr>
+<tr>
+   <td>Attachment ID from Amazon S3</td>
+   <td>{{msg.attach_id}}</td>
+</tr>
 
-
- <router-outlet></router-outlet> 
+   </tbody>
+</table>
+</div>
+<router-outlet></router-outlet>
